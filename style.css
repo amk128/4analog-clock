@@ -1,0 +1,57 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    background: rgb(2, 2, 2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.clock{
+    background: red;
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    background: url(clock.jpg);
+    background-size: cover;
+    box-shadow: inset 10px 10px 15px #202020,
+                inset -10px -10px 15px #202020;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.clock::before{
+    content: "";
+    width: 20px;
+    height: 20px;
+    background: gray;
+    border-radius: 50%;
+    position: absolute;
+    z-index: 4;
+}
+
+.sec{
+    width: 230px;
+    height: 230px;
+    background: red;
+    display: flex;
+    justify-content: center;
+    transform: rotateZ(30deg);
+
+}
+.sec::before{
+    content: "";
+    background: green;
+    width: 2px;
+    height: 150px;
+    position: absolute;
+    z-index: 3;
+}
